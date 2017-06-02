@@ -7,6 +7,7 @@ let questions = [];
 let myFont;
 let dropzone;
 let button;
+let savebutton;
 let question;
 let answer;
 
@@ -27,6 +28,7 @@ function setup() {
   dropzone.dragLeave(unhighlight);
   dropzone.drop(gotFile, unhighlight);
   button = select('#button');
+  savebutton = select('#savebutton');
 
   createP('');
   createCanvas(width, height);
@@ -38,6 +40,8 @@ function setup() {
     }
 
   button.mousePressed(gotInput);
+  savebutton.mousePressed(saveCards);
+
 }
 
 function draw() {
@@ -84,10 +88,12 @@ function addCard(question, answer) {
 }
 
 function gotInput() {
-  question = document.getElementById('question').value;
-  answer = document.getElementById('answer').value;
-  // console.log(question, " q a ", answer);
-  addCard(question, answer);
+  question = document.getElementById('question');
+  answer = document.getElementById('answer');
+  addCard(question.value, answer.value);
+
+  question.value = "Question";
+  answer.value = "Answer";
 }
 
 function gotFile(file) {
@@ -100,4 +106,12 @@ function gotFile(file) {
     console.log("q a ", s)
     addCard(s[0], s[1]);
   }
+}
+
+function saveCards() {
+  let lines = [];
+  for (card of cards) {
+    lines.push(card.cardQ + " | " + card.cardA);
+  }
+  save(lines, 'Q&A.txt');
 }

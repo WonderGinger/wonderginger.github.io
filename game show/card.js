@@ -33,7 +33,7 @@ class Card {
 
     fill(color);
 
-    textSize(24);
+    textSize(this.w / (50 / 3));
 
     textAlign(CENTER);
 

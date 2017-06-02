@@ -28,6 +28,15 @@
       width: 50%;
     }
 
+    #instructions {
+      position: absolute;
+      right: 0px;
+      width: 100px;
+      border: 2px solid #000000;
+      padding: 10px;
+      font-size: 16;
+    }
+
     .textbox {
       width: 50%;
     }
@@ -38,13 +47,17 @@
       font-weight: 100;
     }
   </style>
-  <h1 class="text">America's favorite meme show</h1>
-  <p id="dropzone" class="text">Drag your questions here, or enter them one by one below. </p>
 
-  <form>
-    <input type="text" value="Question" onfocus="if(this.value=='Question') this.value='';" id="question" class="text textbox">
-    <input type="button" value="Submit" id="button" class="text">
-    <input type="text" value="Answer" onfocus="if(this.value=='Answer') this.value='';" id=" answer " class="text textbox ">
+  <a href="instructions.html" id="instructions" class="text">Instructions</a>
+
+  <h1 class="text header">America's favorite meme show.</h1>
+
+  <p id="dropzone" class="text header">Drag your questions and answers here, or enter them one by one below. </p>
+
+  <form id="form">
+    <input type="text" value="Question" onfocus="if(this.value=='Question') this.value='';" id="question" class="text textbox header">
+    <input type="text" value="Answer" onfocus="if(this.value=='Answer') this.value='';" id=" answer " class="text textbox header">
+    <input type="button" value="Submit" id="button" class="text header">
   </form>
 
 

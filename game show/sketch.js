@@ -32,8 +32,9 @@ function setup() {
   background(Color.BACKGROUND);
 
   for (let i = 0; i < cols; i++)
-    for (let j = 0; j < rows; j++)
-      cards.push(new Card(width / cols * i, height / rows * j, width / cols - 1, height / rows - 1));
+    for (let j = 0; j < rows; j++) {
+      // cards.push(new Card(width / cols * i, height / rows * j, width / cols - 1, height / rows - 1));
+    }
 
   button.mousePressed(addCard);
 }
@@ -63,10 +64,22 @@ function unhighlight() {
 
 function addCard() {
   textbox = selectAll('.textbox');
-  console.log(textbox.value);
+  if (cards.length >= rows * cols) {
+    if (rows >= cols) {
+      return;
+      cols++;
+    } else {
+      rows++;
+    }
+  }
+
+  let i = cards.length % cols;
+  let j = floor(cards.length / rows);
+  cards.push(new Card(width / cols * i, height / rows * j, width / cols - 1, height / rows - 1));
+  console.log("Creating card ", i, " ", j, "\nCard count: ", cards.length, " cols: ", cols, " rows: ", rows);
 }
 
 
 function gotFile(file) {
-  cards.push()
+
 }

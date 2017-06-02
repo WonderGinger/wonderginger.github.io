@@ -24,9 +24,7 @@ class Card {
     } else {
       this.drawCard(Color.CARD);
       this.drawText(this.cardQ, 'white');
-
     }
-
   }
 
   drawText(string, color) {

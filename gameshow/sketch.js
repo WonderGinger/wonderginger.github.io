@@ -4,10 +4,11 @@ let cards = [];
 let cols = 4;
 let rows = 4;
 let questions = [];
-let textbox;
 let myFont;
 let dropzone;
 let button;
+let question;
+let answer;
 
 const Color = {
   BACKGROUND: '#004',
@@ -36,7 +37,7 @@ function setup() {
       // cards.push(new Card(width / cols * i, height / rows * j, width / cols - 1, height / rows - 1));
     }
 
-  button.mousePressed(addCard);
+  button.mousePressed(gotInput);
 }
 
 function draw() {
@@ -62,11 +63,10 @@ function unhighlight() {
   dropzone.style('background-color', 'white');
 }
 
-function addCard() {
-  textbox = selectAll('.textbox');
+function addCard(question, answer) {
   if (cards.length >= rows * cols) {
     if (rows >= cols) {
-      return;
+      return; //until i have redrawing implemented
       cols++;
     } else {
       rows++;
@@ -75,11 +75,29 @@ function addCard() {
 
   let i = cards.length % cols;
   let j = floor(cards.length / rows);
-  cards.push(new Card(width / cols * i, height / rows * j, width / cols - 1, height / rows - 1));
+  let c = new Card(width / cols * i, height / rows * j, width / cols - 1, height / rows - 1);
+  c.setQ(question);
+  c.setA(answer);
+
+  cards.push(c);
   console.log("Creating card ", i, " ", j, "\nCard count: ", cards.length, " cols: ", cols, " rows: ", rows);
 }
 
+function gotInput() {
+  question = document.getElementById('question').value;
+  answer = document.getElementById('answer').value;
+  // console.log(question, " q a ", answer);
+  addCard(question, answer);
+}
 
 function gotFile(file) {
+  let data = file.data;
+  let fileLines = data.match(/[^\r\n]+/g);
+  console.log("file lines: ", fileLines);
 
+  for (inputLine of fileLines) {
+    let s = inputLine.split(" | ");
+    console.log("q a ", s)
+    addCard(s[0], s[1]);
+  }
 }

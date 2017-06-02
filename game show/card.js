@@ -19,34 +19,58 @@ class Card {
   }
   show() {
     if (this.revealed) {
-      this.drawCard('lightblue');
+      this.drawCard(Color.CARDREVEALED);
       this.drawText(this.cardA, 'black');
     } else {
-      this.drawCard('blue');
+      this.drawCard(Color.CARD);
       this.drawText(this.cardQ, 'white');
+
     }
+
   }
+
   drawText(string, color) {
+
     fill(color);
+
     textSize(24);
+
     textAlign(CENTER);
+
     noStroke();
+
+    textFont(this.cardFont);
+
     text(string, this.x + this.w / 8, this.y + this.h / 3, 3 * this.w / 4, 2 * this.h / 3);
+
   }
+
   drawCard(color) {
+
     noStroke();
+
     fill(color);
+
     rect(this.x, this.y, this.w, this.h);
+
     noFill();
+
     stroke(255);
+
     rect(this.x + 10, this.y + 10, this.w - 20, this.h - 20);
+
   }
+
   clicked(x, y) {
+
     if (x >= this.x && x <= this.x + this.w) {
       if (y >= this.y && y <= this.y + this.h)
         return true;
     } else {
       return false;
     }
+  }
+  setCardFont(font) {
+    this.cardFont = font;
   }
 }

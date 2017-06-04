@@ -23,6 +23,7 @@ div {
 
 span + span{
   margin-left: 3vh;
+  border-left: 5 px solid black;
 }
 
 #name{
@@ -45,25 +46,7 @@ span + span{
   color: whitesmoke;
 }
 
-a:link {
-  color: white;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:visited {
-  color: white;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:hover {
-  color: white;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:active {
+a:link, a:visited, a:hover, a:active {
   color: white;
   background-color: transparent;
   text-decoration: none;

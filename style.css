@@ -43,6 +43,10 @@ span + span{
   position: relative;
 }
 
+.divider{
+  color:whitesmoke;
+  /*color:slategrey;*/
+}
 
 .text {
   font-family: open-sans, sans-serif;

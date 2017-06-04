@@ -7,7 +7,7 @@ html, body {
 
 body {
   background-color: rgba(255, 255, 255, 0);
-  background-image: url("assets/images/backgroundoverlay.png");
+  background-image: url("assets/images/backgroundoverlay-dark.png");
   background-repeat: repeat;
 }
 
@@ -24,15 +24,17 @@ span + span{
   max-width: 100vh;
   left: 30%;
   top: 30%;
-  background: rgba(10, 10, 10, .7);
+  /*background: rgba(10, 10, 10, .7);*/
+  background: rgba(160,160,160,.7);
 }
 
 #name{
   font-size: 6vh;
   letter-spacing: .7vh;
-  font-weight: bolder;
+  font-weight: lighter;
   padding: 2vh;
   margin-bottom: 0;
+  margin-top: 3vh;
 }
 
 #links{
@@ -43,10 +45,11 @@ span + span{
 
 
 .text {
-  font-family: proxima-nova, sans-serif;
+  font-family: open-sans, sans-serif;
   font-style: normal;
-  font-weight: 100;
-  color: whitesmoke;
+  font-weight: 300;
+  /*color: whitesmoke;*/
+  color:black;
 }
 
 a:link, a:visited, a:hover, a:active {

@@ -47,7 +47,7 @@ function colorGraph() {
   // The background rectangles
   fill('pink');
   rect(x1, y1, barWidth, barHeight);
-  fill('lightblue');
+  fill('darkseagreen');
   rect(x1 + barWidth, y1, barWidth, barHeight);
   fill('lightblue');
   rect(x1 + 2 * barWidth, y1, barWidth, barHeight);

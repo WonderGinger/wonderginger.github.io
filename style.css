@@ -11,25 +11,28 @@ body {
   background-repeat: repeat;
 }
 
-div {
+span + span{
+  margin-left: 1vh;
+}
+
+#main {
   position: fixed;
   text-align: center;
+  font-size: 100%;
+  min-width: 35vh;
   width: 40%;
-  height: 25%;
+  max-width: 100vh;
   left: 30%;
   top: 30%;
   background: rgba(10, 10, 10, .7);
-}
-
-span + span{
-  margin-left: 3vh;
-  border-left: 5 px solid black;
 }
 
 #name{
   font-size: 6vh;
   letter-spacing: .7vh;
   font-weight: bolder;
+  padding: 2vh;
+  margin-bottom: 0;
 }
 
 #links{

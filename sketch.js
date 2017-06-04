@@ -20,11 +20,9 @@ function setup() {
   canvas.style('position', 'absolute');
   canvas.style('bottom', '0');
   canvas.style('left', '0');
-
 }
 
 function draw() {
-
   document.body.style.backgroundColor = "rgb(" + r + ", " + g + ", " + b + ")";
   if (r != red) r < red ? r++ : r--;
   if (g != green) g < green ? g++ : g--;

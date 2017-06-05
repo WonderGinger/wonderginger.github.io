@@ -6,8 +6,8 @@ html, body {
 }
 
 body {
-  background-color: rgba(255, 255, 255, 0);
-  background-image: url("assets/images/backgroundoverlay-dark.png");
+  background-size: 100%;
+  background-image: url("assets/images/backgroundoverlay-light.png");
   background-repeat: repeat;
 }
 
@@ -24,17 +24,23 @@ span + span{
   max-width: 100vh;
   left: 30%;
   top: 30%;
-  /*background: rgba(10, 10, 10, .7);*/
-  background: rgba(160,160,160,.7);
+  /*black*/
+  background: rgba(10, 10, 10, .7);
+  /*white*/
+  background: rgba(255,255,255,.3);
+  /* orange */
+  background: rgba(243, 156, 18, .8);
+  /* blue */
+  background: rgba(44, 62, 80, .9)
 }
 
 #name{
   font-size: 6vh;
   letter-spacing: .7vh;
-  font-weight: lighter;
   padding: 2vh;
-  margin-bottom: 0;
   margin-top: 3vh;
+  font-weight: lighter;
+  margin-bottom: 0;
 }
 
 #links{
@@ -44,8 +50,9 @@ span + span{
 }
 
 .divider{
-  color:whitesmoke;
-  /*color:slategrey;*/
+  /*color:whitesmoke;*/
+  /*color:slategrey; */
+  color: #617487;
 }
 
 .text {
@@ -53,11 +60,19 @@ span + span{
   font-style: normal;
   font-weight: 300;
   /*color: whitesmoke;*/
-  color:black;
+  color: #ecf0f1; /* clouds */
+  /*color:black;*/
 }
 
-a:link, a:visited, a:hover, a:active {
-  color: white;
+a:link, a:visited, a:active {
+  /*color: ivory;*/
+  /* ligher blue */
+  color: #D0C190;
   background-color: transparent;
   text-decoration: none;
+}
+
+a:hover {
+  /*color:AliceBlue;*/
+  color: #F6EBC8;
 }

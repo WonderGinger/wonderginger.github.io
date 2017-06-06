@@ -6,6 +6,7 @@ let g;
 let b;
 let canvas;
 let counter;
+let copiedmessage;
 let colorRange = {
   lo: 0,
   hi: 256
@@ -21,23 +22,19 @@ function setup() {
   r = 255; //255,248,220 cornsilk
   g = 248;
   b = 220;
-
-  canvas = createCanvas(95, 85);
-  canvas.style('opacity', '0.7');
-  canvas.style('position', 'absolute');
-  canvas.style('bottom', '0');
-  canvas.style('left', '0');
+  emailToClipboard();
+  styleCanvas();
+  copiedmessage = createP('copied to clipboard');
+  copiedmessage.addClass('copied');
+  copiedmessage.parent('main');
+  copiedmessage.hide();
 
 
 }
 
 function draw() {
   backgroundAnimation();
-  var clipboard = new Clipboard('#email', {
-    target: function() {
-      return "brandt.willems@gmail.com";
-    }
-  })
+
   // colorGraph();
 }
 
@@ -85,4 +82,42 @@ function colorGraph() {
   rect(x1 + barWidth, y1 + barHeight - (g / 4), barWidth, (g / 4));
   fill('royalblue');
   rect(x1 + 2 * barWidth, y1 + barHeight - (b / 4), barWidth, (b / 4));
+}
+
+function emailToClipboard() {
+  var clipboard = new Clipboard('#email', {
+    text: function() {
+      return "brandt.willems@gmail.com";
+    }
+  })
+  clipboard.on('success', function(e) {
+    console.info('Action:', e.action);
+    console.info('Text:', e.text);
+    console.info('Trigger:', e.trigger);
+    // confirm("copied to clipboard");
+    var op = 1; // initial opacity
+    copiedmessage.show();
+    var timer = setInterval(function() {
+      if (op <= 0.05) {
+        clearInterval(timer);
+        copiedmessage.style('display', 'none');
+      }
+      copiedmessage.style('opacity', op);
+      copiedmessage.style('filter', 'alpha(opacity=' + op * 100 + ")");
+      op -= op * 0.1;
+    }, 50);
+    e.clearSelection();
+  });
+  clipboard.on('error', function(e) {
+    console.error('Action:', e.action);
+    console.error('Trigger:', e.trigger);
+  });
+}
+
+function styleCanvas() {
+  canvas = createCanvas(95, 85);
+  canvas.style('opacity', '0.7');
+  canvas.style('position', 'absolute');
+  canvas.style('bottom', '0');
+  canvas.style('left', '0');
 }

@@ -24,10 +24,6 @@ span + span{
   max-width: 100vh;
   left: 25%;
   top: 30%;
-  /*black*/
-  /*background: rgba(10, 10, 10, .7);*/
-  /*white*/
-  /*background: rgba(255,255,255,.3);*/;
   /* blue */
   background: rgba(44, 62, 80, .9);
 }
@@ -35,7 +31,7 @@ span + span{
 #name{
   font-size: 6vh;
   letter-spacing: .7vh;
-  padding: 2vh;
+  padding: 0vh;
   margin-top: 3vh;
   font-weight: lighter;
   margin-bottom: 0;
@@ -46,7 +42,7 @@ span + span{
   height: .3vh;
   background:linear-gradient(to right, rgba(0,0,0,0) 30%, rgba(147,147,147,.8) 50%, rgba(0,0,0,0) 70%);
   display: block;
-  margin-bottom: 1vh;
+  margin-bottom: .5vh;
   margin-top: 1.5vh;
 }
 
@@ -54,6 +50,10 @@ span + span{
   font-size: 2vh;
   letter-spacing: .1vh;
   position: relative;
+}
+
+#description{
+  font-size: 2vh;
 }
 
 .divider{
@@ -66,9 +66,21 @@ span + span{
   font-family: open-sans, sans-serif;
   font-style: normal;
   font-weight: 300;
-  /*color: whitesmoke;*/
-  color: #ecf0f1; /* clouds */
+  /*clouds*/
+  color: #ecf0f1;
   /*color:black;*/
+}
+
+.copied {
+  position: absolute;
+  text-align: center;
+  padding: 1vh;
+  border-radius: .6vh;
+  color: #ecf0f1;
+  background: black;
+  font-size: 1vw;
+  left: 40%;
+  opacity: 1;
 }
 
 a:link, a:visited, a:active {

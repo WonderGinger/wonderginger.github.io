@@ -6,9 +6,11 @@ html, body {
 }
 
 body {
-  background-size: 100%;
+  background-size: cover;
+  min-width: 100vw;
+  min-height: 100vh;
   background-image: url("assets/images/backgroundoverlay-light.png");
-  background-repeat: repeat;
+  background-repeat: no-repeat;
 }
 
 span + span{
@@ -24,8 +26,7 @@ span + span{
   max-width: 100vh;
   left: 25%;
   top: 30%;
-  /* blue */
-  background: rgba(44, 62, 80, .9);
+  background: rgba(44, 62, 80, .9); /* blue */
 }
 
 #name{

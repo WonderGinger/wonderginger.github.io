@@ -20,18 +20,16 @@ span + span{
   text-align: center;
   font-size: 100%;
   min-width: 35vh;
-  width: 40%;
+  width: 50%;
   max-width: 100vh;
-  left: 30%;
+  left: 25%;
   top: 30%;
   /*black*/
-  background: rgba(10, 10, 10, .7);
+  /*background: rgba(10, 10, 10, .7);*/
   /*white*/
-  background: rgba(255,255,255,.3);
-  /* orange */
-  background: rgba(243, 156, 18, .8);
+  /*background: rgba(255,255,255,.3);*/;
   /* blue */
-  background: rgba(44, 62, 80, .9)
+  background: rgba(44, 62, 80, .9);
 }
 
 #name{
@@ -41,6 +39,15 @@ span + span{
   margin-top: 3vh;
   font-weight: lighter;
   margin-bottom: 0;
+}
+
+#name:after {
+  content: "";
+  height: .3vh;
+  background:linear-gradient(to right, rgba(0,0,0,0) 30%, rgba(147,147,147,.8) 50%, rgba(0,0,0,0) 70%);
+  display: block;
+  margin-bottom: 1vh;
+  margin-top: 1.5vh;
 }
 
 #links{

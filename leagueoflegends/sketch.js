@@ -1,5 +1,5 @@
 let api_key;
-let config;
+// let config;
 let summonerNameRegex;
 
 

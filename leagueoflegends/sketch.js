@@ -4,7 +4,7 @@ let summonerNameRegex;
 
 
 function preload() {
-  config = loadStrings('../leagueoflegends/config.txt');
+  // config = loadStrings('../leagueoflegends/config.txt');
   // $.get(
   //   'https://na1.api.riotgames.com/lol/summoner/v3/summoners/by-name/wonderginger?api_key=RGAPI-edc09dbb-b009-41ec-bb5c-e8af5f65cad8'
   // );

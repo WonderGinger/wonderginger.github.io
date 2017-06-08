@@ -6,11 +6,11 @@ html, body {
 }
 
 body {
+  background: url("assets/images/backgroundoverlay-light.png")  no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  min-width: 100vw;
-  min-height: 100vh;
-  background-image: url("assets/images/backgroundoverlay-light.png");
-  background-repeat: no-repeat;
 }
 
 span + span{
@@ -21,9 +21,9 @@ span + span{
   position: fixed;
   text-align: center;
   font-size: 100%;
+  max-width: 100vh;
   min-width: 35vh;
   width: 50%;
-  max-width: 100vh;
   left: 25%;
   top: 30%;
   background: rgba(44, 62, 80, .9); /* blue */
@@ -48,12 +48,14 @@ span + span{
 }
 
 #links{
-  font-size: 2vh;
+  font-size: 1.8vh;
   letter-spacing: .1vh;
   position: relative;
 }
 
 #description{
+  padding: 0;
+  margin-top: 0;
   font-size: 2vh;
 }
 

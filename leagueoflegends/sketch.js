@@ -12,7 +12,7 @@ function preload() {
 }
 
 function setup() {
-  api_key = config[0].match(/^api key=(.*)/)[1];
+  // api_key = config[0].match(/^api key=(.*)/)[1];
   summonerNameRegex = /^[0-9\\p{L} _\\.]+$/;
 
   var response;

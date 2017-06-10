@@ -34,14 +34,8 @@ function setup() {
   createCanvas(width, height);
   background(Color.BACKGROUND);
 
-  for (let i = 0; i < cols; i++)
-    for (let j = 0; j < rows; j++) {
-      // cards.push(new Card(width / cols * i, height / rows * j, width / cols - 1, height / rows - 1));
-    }
-
   button.mousePressed(gotInput);
   savebutton.mousePressed(saveCards);
-
 }
 
 function draw() {

@@ -3,6 +3,7 @@
 
 <head>
   <title>game show</title>
+  <link rel="shortcut icon" href="../assets/images/favicon.ico">
 
   <script src="../libraries/p5.js" type="text/JavaScript"></script>
   <script src="../libraries/p5.dom.js" type="text/JavaScript"></script>
@@ -19,6 +20,18 @@
       });
     } catch (e) {}
   </script>
+
+  <a href="instructions.html" id="instructions" class="text">Instructions</a>
+
+  <h1 class="text header">America's favorite meme show.</h1>
+
+  <p id="dropzone" class="text header">Drag your questions and answers here, or enter them one by one below. </p>
+
+  <input type="text" value="Question" onfocus="if(this.value=='Question') this.value='';" id="question" class="text textbox header">
+  <input type="text" value="Answer" onfocus="if(this.value=='Answer') this.value='';" id="answer" class="text textbox header">
+  <input type="button" value="Submit" id="button" class="text header">
+  <input type="button" value="Save" id="savebutton" class="text header">
+  <p></p>
 
   <style>
     #dropzone {
@@ -47,20 +60,6 @@
       font-weight: 100;
     }
   </style>
-
-  <a href="instructions.html" id="instructions" class="text">Instructions</a>
-
-  <h1 class="text header">America's favorite meme show.</h1>
-
-  <p id="dropzone" class="text header">Drag your questions and answers here, or enter them one by one below. </p>
-
-  <input type="text" value="Question" onfocus="if(this.value=='Question') this.value='';" id="question" class="text textbox header">
-  <input type="text" value="Answer" onfocus="if(this.value=='Answer') this.value='';" id="answer" class="text textbox header">
-  <input type="button" value="Submit" id="button" class="text header">
-  <input type="button" value="Save" id="savebutton" class="text header">
-
-  <p></p>
-
 </head>
 
 <body>

@@ -1,7 +1,6 @@
 body {
   background-image: url("../assets/images/eGirlFanboys/eGirl-background.jpg");
   margin: 0;
-  padding-bottom: 20px;
 }
 
 #header {
@@ -53,11 +52,13 @@ div.tab button.active {
 
 .tabcontent {
   display: none;
+  position: relative;
   padding: 6px 12px;
   /*border: 1px solid #ccc;*/
   border-top: none;
   -webkit-animation: fadeEffect 1s;
   animation: fadeEffect 1s;
+  overflow: hidden;
 }
 
 @-webkit-keyframes fadeEffect {
@@ -84,8 +85,6 @@ iframe {
 }
 
 #challonge {
-  position: relative;
-  width: auto;
 }
 
 #plan {
@@ -93,12 +92,12 @@ iframe {
 }
 
 #stats {
+  position: absolute;
   width: 98%;
+  height: 100%;
   padding: 15px;
 }
 
 #opgg {
-  position: relative;
-  width: auto;
-  height: auto;
+
 }

@@ -3,6 +3,14 @@ function setup() {
   // $(".tablinks").mousedown(function() {
   //   alert("Handler for .mousedown() called.");
   // })
+  $('#challonge').challonge('Phoenix_League_season2', {
+    subdomain: '',
+    theme: '0',
+    multiplier: '1.0',
+    match_width_multiplier: '1.0',
+    show_final_results: '1',
+    show_standings: '1'
+  });
 }
 
 function openTab(evt, tabName) {

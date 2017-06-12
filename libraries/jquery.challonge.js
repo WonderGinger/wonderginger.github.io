@@ -26,7 +26,7 @@
       Challonge.prototype._sourceWithOptions = function() {
         var subdomain;
         subdomain = this.subdomain ? "" + this.subdomain + "." : '';
-        return "http://" + subdomain + "challonge.com/" + this.tournamentUrl +
+        return "https://" + subdomain + "challonge.com/" + this.tournamentUrl +
           "/module?" + ($.param(this.options));
       };
 

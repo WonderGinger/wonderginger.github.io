@@ -80,11 +80,17 @@ div.chart-container {
   border-bottom: 5px solid 'white';
 }
 
-div#pictures img{
+div#about img{
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
   width: 70%;
+}
+
+div#about p{
+  color: #ecf0f1;
 }
 
 @-webkit-keyframes fadeEffect {

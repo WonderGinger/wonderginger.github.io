@@ -15,6 +15,7 @@ function setup() {
     show_standings: '1'
   });
 
+
   drawChart(data, $('#KDA'), "KDA");
   drawChart(data, $('#firstbloods'), "First Bloods");
   drawChart(data, $('#avgcsmin'), "Avg CS / Min");
@@ -110,7 +111,6 @@ function drawChart(data, element, chartType) {
       }]
     },
     options: {
-
       legend: {
         labels: {
           fontColor: 'white'

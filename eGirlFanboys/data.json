@@ -1,0 +1,93 @@
+{
+  "Average" : {
+    "Player" : "Average",
+    "KDA" : 2.670288461538462,
+    "First Bloods" : 0.25675675675675674,
+    "Avg CS / Min" : 4.943243243243243,
+    "CS Diff @ 10" : -2.3603603603603607,
+    "Gold Share" : 0.14321764938111,
+    "Damage / Min" : 440.77027027027026,
+    "Damage Share" : 0.14335882702673003,
+    "Kill Participation" : 0.37833333333333347,
+    "WP/Min" : 0.4728378378378378,
+    "WD/Min" : 0.11513513513513512
+  },
+  "Katar" : {
+    "Player" : "Katar",
+    "KDA" : 11.2,
+    "First Bloods" : 0,
+    "Avg CS / Min" : 7.1,
+    "CS Diff @ 10" : 9.416666666666664,
+    "Gold Share" : 0.20245893421118594,
+    "Damage / Min" : 486,
+    "Damage Share" : 0.19265440615079632,
+    "Kill Participation" : 0.58,
+    "WP/Min" : 0.48,
+    "WD/Min" : 0.1
+  },
+  "Tapmaster" : {
+    "Player" : "Tapmaster",
+    "KDA" : "",
+    "First Bloods" : "",
+    "Avg CS / Min" : "",
+    "CS Diff @ 10" : "",
+    "Gold Share" : "",
+    "Damage / Min" : "",
+    "Damage Share" : "",
+    "Kill Participation" : "",
+    "WP/Min" : "",
+    "WD/Min" : ""
+  },
+  "Wonder Ginger" : {
+    "Player" : "Wonder Ginger",
+    "KDA" : 6.71,
+    "First Bloods" : 0,
+    "Avg CS / Min" : 6.5,
+    "CS Diff @ 10" : -11.916666666666666,
+    "Gold Share" : 0.19670220410073025,
+    "Damage / Min" : 512,
+    "Damage Share" : 0.20311223328020145,
+    "Kill Participation" : 0.48,
+    "WP/Min" : 0.45,
+    "WD/Min" : 0.03
+  },
+  "Clive Gildarts" : {
+    "Player" : "Clive Gildarts",
+    "KDA" : "",
+    "First Bloods" : "",
+    "Avg CS / Min" : "",
+    "CS Diff @ 10" : "",
+    "Gold Share" : "",
+    "Damage / Min" : "",
+    "Damage Share" : "",
+    "Kill Participation" : "",
+    "WP/Min" : "",
+    "WD/Min" : ""
+  },
+  "Yoohoo Maniac" : {
+    "Player" : "Yoohoo Maniac",
+    "KDA" : 12,
+    "First Bloods" : 1,
+    "Avg CS / Min" : 1.2,
+    "CS Diff @ 10" : 15.041666666666664,
+    "Gold Share" : 0.16360309476463414,
+    "Damage / Min" : 193,
+    "Damage Share" : 0.0765467404262159,
+    "Kill Participation" : 0.74,
+    "WP/Min" : 1.1,
+    "WD/Min" : 0.27
+  },
+  "Hopeless0ne" : {
+    "Player" : "Hopeless0ne",
+    "KDA" : 5.64,
+    "First Bloods" : 1,
+    "Avg CS / Min" : 6.4,
+    "CS Diff @ 10" : 5.416666666666664,
+    "Gold Share" : 0.22653443176311347,
+    "Damage / Min" : 771,
+    "Damage Share" : 0.30546700242442104,
+    "Kill Participation" : 0.64,
+    "WP/Min" : 0.46,
+    "WD/Min" : 0.22
+  }
+}

@@ -63,12 +63,27 @@ div.tab button.active {
   overflow: hidden;
 }
 
+div#stats iframe, div#challonge iframe, div#opgg iframe, div#prep iframe{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+div.chart-container {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  position: relative;
+  float:left;
+  height:45vh;
+  width:45vw;
+  border-bottom: 5px solid 'white';
+}
+
 div#pictures img{
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-div#pictures img {
   width: 70%;
 }
 

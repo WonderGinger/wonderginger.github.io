@@ -17,14 +17,16 @@
   <div id="header">
     <img id="logo" src="../assets/images/eGirlFanboys/eGirl-logo-transparent.png"></img>
     <img id="egirlfanboys" src="../assets/images/eGirlFanboys/eGirl-text.png"></img>
+    <div class="tab">
+      <button class="tablinks" onclick="openTab(event, 'stats')">stats</button>
+      <button class="tablinks" onclick="openTab(event, 'opgg')">op.gg</button>
+      <button class="tablinks" onclick="openTab(event, 'challonge')">bracket</button>
+      <button class="tablinks" onclick="openTab(event, 'prep')">prep</button>
+      <button class="tablinks" onclick="openTab(event, 'pictures')">pictures</button>
+    </div>
   </div>
 
-  <div class="tab">
-    <button class="tablinks" onclick="openTab(event, 'stats')">stats</button>
-    <button class="tablinks" onclick="openTab(event, 'opgg')">op.gg</button>
-    <button class="tablinks" onclick="openTab(event, 'challonge')">bracket</button>
-    <button class="tablinks" onclick="openTab(event, 'pictures')">pictures</button>
-  </div>
+
 
   <div id="stats" class="tabcontent">
     <iframe frameborder="0" src="https://docs.google.com/spreadsheets/d/1MrOseX3BzAs3G-McY26RZIer9X_wmFZZffvXg-NoYws/pubhtml?widget=true&amp;headers=false"
@@ -44,6 +46,11 @@
   <div id="opgg" class="tabcontent">
     <iframe src="https://na.op.gg/multi/query=katar%2Cwonderginger%2Ctapmaster%2Cclivegildarts%2Cyoohoomaniac"
       width="100%" height="800" frameborder="0"></iframe>
+  </div>
+
+  <div id="prep" class="tabcontent">
+    <iframe src="https://docs.google.com/spreadsheets/d/1xf_ql8LT8yhC3teSb70HlPJHVEnMFYP1SSdxzPVwIlk/pubhtml?widget=true&amp;headers=false"
+      width="100%" height="700"></iframe>
   </div>
 </body>
 

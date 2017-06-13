@@ -1,8 +1,4 @@
 function setup() {
-  // $('.tablinks').mousedown(openTab);
-  // $(".tablinks").mousedown(function() {
-  //   alert("Handler for .mousedown() called.");
-  // })
   $('#challonge').challonge('Phoenix_League_season2', {
     subdomain: '',
     theme: '0',
@@ -32,4 +28,19 @@ function openTab(evt, tabName) {
   // Show the current tab, and add an "active" class to the button that opened the tab
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
+}
+
+
+function drawChart() {
+  var query = new google.visualization.Query(
+    'https://docs.google.com/spreadsheets/d/1H6Ej3evkqa8xDHLyHDrVBsA12Dvh__ZEKvPv-2tgtaA/edit?usp=sharing'
+  );
+  query.send(handleQueryResponse);
+}
+
+function handleQueryResponse(response) {
+  var data = response.getDataTable();
+  var chart = new google.visualization.ColumnChart(document.getElementById(
+    'columnchart'));
+  chart.draw(data, null);
 }

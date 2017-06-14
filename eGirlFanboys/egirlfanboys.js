@@ -15,7 +15,6 @@ function setup() {
     show_standings: '1'
   });
 
-
   drawChart(data, $('#KDA'), "KDA");
   drawChart(data, $('#firstbloods'), "First Bloods");
   drawChart(data, $('#avgcsmin'), "Avg CS / Min");
@@ -25,7 +24,10 @@ function setup() {
   drawChart(data, $('#damageshare'), "Damage Share");
   drawChart(data, $('#killparticipation'), "Kill Participation");
 
+  $('.image').click(enlargeImage);
+
 }
+
 
 function openTab(evt, tabName) {
   // Declare all variables
@@ -46,6 +48,22 @@ function openTab(evt, tabName) {
   // Show the current tab, and add an "active" class to the button that opened the tab
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
+}
+
+function enlargeImage(evt) {
+  var i, album, alreadyEnlarged;
+
+  evt.currentTarget.className.includes("enlarged") ? alreadyEnlarged = true :
+    alreadyEnlarged = false;
+
+  album = $('.image');
+  for (i = 0; i < album.length; i++) {
+    album[i].className = album[i].className.replace(" enlarged", "");
+  }
+
+  if (!alreadyEnlarged) {
+    evt.currentTarget.className += " enlarged";
+  }
 }
 
 function drawChart(data, element, chartType) {
@@ -79,7 +97,8 @@ function drawChart(data, element, chartType) {
         "Yoohoo Maniac", "Hopeless0ne"
       ],
       datasets: [{
-        label: chartType,
+        label: "",
+        boxWidth: 0,
         data: chartData,
         backgroundColor: [
           'rgba(255, 99, 132, 0.2)',
@@ -100,6 +119,7 @@ function drawChart(data, element, chartType) {
         borderWidth: 1
       }, {
         label: 'League Average',
+        fillStyle: Color,
         data: averageData,
         lineCap: 'round',
         borderColor: 'rgba(200,200,200,.5)',
@@ -111,12 +131,23 @@ function drawChart(data, element, chartType) {
       }]
     },
     options: {
+      title: {
+        display: true,
+        fontSize: 18,
+        text: chartType
+      },
       legend: {
+        display: false,
         labels: {
-          fontColor: 'white'
+          fontColor: 'white',
         }
       },
       scales: {
+        xAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }],
         yAxes: [{
           ticks: {
             beginAtZero: true

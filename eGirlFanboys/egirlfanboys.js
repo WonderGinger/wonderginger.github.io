@@ -73,21 +73,21 @@ function drawChart(data, element, chartType) {
   Chart.defaults.global.defaultFontColor = 'white';
   Chart.defaults.global.elements.point.radius = 0;
 
-  let Average = data.Average;
+  let Average = data['League Average'];
   let Katar = data.Katar;
   let Tapmaster = data.Tapmaster;
-  let WonderGinger = data.WonderGinger;
-  let CliveGildarts = data.CliveGildarts;
-  let YoohooManiac = data.YoohooManiac;
+  let WonderGinger = data['Wonder Ginger'];
+  let CliveGildarts = data['Clive Gildarts'];
+  let YoohooManiac = data['Yoohoo Maniac'];
   let Hopeless0ne = data.Hopeless0ne;
 
   let chartData = [];
   let averageData = [];
   for (i in data) {
-    if (data[i].Player !== "Average") {
+    if (data[i].Player !== "League Average") {
       let player = data[i];
-      chartData.push(Math.round(player[chartType] * 10) / 10);
-      averageData.push(Math.round(Average[chartType] * 10) / 10);
+      chartData.push(Math.round(player[chartType] * 100) / 100);
+      averageData.push(Math.round(Average[chartType] * 100) / 100);
     }
   }
   var myChart = new Chart(ctx, {
@@ -137,17 +137,11 @@ function drawChart(data, element, chartType) {
         text: chartType
       },
       legend: {
-        display: false,
         labels: {
           fontColor: 'white',
         }
       },
       scales: {
-        xAxes: [{
-          ticks: {
-            beginAtZero: true
-          }
-        }],
         yAxes: [{
           ticks: {
             beginAtZero: true

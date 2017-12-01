@@ -17,6 +17,13 @@ span + span{
   margin-left: 1vh;
 }
 
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+
+}
+
 div#main {
   position: fixed;
   font-family: 'Cabin', sans-serif;

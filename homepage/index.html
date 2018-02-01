@@ -18,20 +18,24 @@
         .nav-tabs {
             margin-bottom: 0;
         }
-        .media {
-            cursor: pointer;
-            border: 2px solid var(--bg-color);
+        a.divLink {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            text-decoration: none;
+            z-index: 4;
             -webkit-transition:0.5s;
-            transition: 0.5s;    
-            padding: 10px;        
+            transition: 0.5s; 
+            padding: 10px;  
         }
-        .media:hover{
-            border: 2px solid lightslategray;
+        a.divLink:hover {
+            background-color: rgba(229, 239, 255, .4);
             color: black;
         }
-        .media-thumbnail {
-            width: 30%;
-            vertical-align: middle;
+        .link-body {
+            padding: 10px;
         }
         .grid-divider {
             outline: 1px solid black;
@@ -51,96 +55,139 @@
         <div class="row">
             <!-- Reddit -->
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <a class="media" href="https://www.reddit.com/">
-                    <img class="mr-2 img-fluid media-thumbnail" src="http://icons.iconarchive.com/icons/uiconstock/socialmedia/128/Reddit-icon.png" alt="Reddit">
-                    <div class="media-body">
+                <div class="row">
+                    <div class="col-4">
+                        <a class="divLink" href="https://www.reddit.com/"></a>
+                        <img class="img-fluid" src="http://icons.iconarchive.com/icons/uiconstock/socialmedia/128/Reddit-icon.png" alt="Reddit">
+                    </div>
+                    <div class="col-8">
                         <h5 class="mt-0">Reddit</h5>
                         The front page of the internet.
-                </a>
-            </div></div>
-
-            <!-- Youtube -->
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="media">
-                        <img class="mr-2 img-fluid media-thumbnail" src="http://icons.iconarchive.com/icons/dakirby309/simply-styled/128/YouTube-icon.png" alt="Youtube">
-                        <div class="media-body">
-                            <a href="https://www.youtube.com/feed/subscriptions">
-                            <h5 class="mt-0">Youtube</h5>
-                            <div class="btn-group btn-group-sm" role="group">
-                                <a href="https://www.youtube.com/" class="btn btn-primary btn-md" role="button">Home</a></br>
-                                <a href="https://www.youtube.com/feed/trending" class="btn btn-primary btn-md" role="button">Trending</a></br>
-                            </div>
-                            </a>
-                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!--Twitch-->
+            <!-- Youtube -->
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="media" onclick="location.href='https://www.twitch.tv/'">
-                    <img class="mr-2 img-fluid media-thumbnail" src="http://www.iconninja.com/files/830/856/929/logo-brand-social-network-twitch-icon.png" alt="Twitch">
-                    <div class="media-body">
+                <div class="row">
+                    <div class="col-4">
+                        <a class="divLink" href="https://www.youtube.com/feed/subscriptions"></a>
+                        <img class="img-fluid" src="http://icons.iconarchive.com/icons/dakirby309/simply-styled/128/YouTube-icon.png" alt="Youtube">
+                    </div>
+                    <div class="col-8">
+                        <h5 class="mt-0">Youtube</h5>
+                        <div class="btn-group btn-group-sm" role="group">
+                                <a href="https://www.youtube.com/" class="btn btn-primary btn-md" role="button">Home</a></br>
+                                <a href="https://www.youtube.com/feed/trending" class="btn btn-primary btn-md" role="button">Trending</a></br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Twitch -->
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="row">
+                    <div class="col-4">
+                        <a class="divLink" href="https://www.twitch.tv/"></a>
+                        <img class="img-fluid" src="http://www.iconninja.com/files/830/856/929/logo-brand-social-network-twitch-icon.png" alt="Twitch">
+                    </div>
+                    <div class="col-8">
                         <h5 class="mt-0">Twitch</h5>
                         <div class="btn-group btn-group-sm" role="group">
                             <a href="https://www.twitch.tv/directory/game/Super%20Smash%20Bros.%20Melee" class="btn btn-primary btn-md" role="button">Melee</a></br>
                             <a href="https://www.twitch.tv/directory/game/League%20Of%20Legends" class="btn btn-primary btn-md" role="button">League</a></br>
                         </div>
-
-        </div></div></div></div>
+                    </div>
+                </div>
+            </div>
+        <!-- End of row 1 -->
+        </div>
 
         <div class="row">
 
             <!-- Twitter -->
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="media" onclick="location.href='https://www.twitter.com/'">
-                    <img class="mr-2 img-fluid media-thumbnail" src="https://cdn2.iconfinder.com/data/icons/minimalism/128/twitter.png" alt="Twitter">
-                    <div class="media-body">
+                <div class="row">
+                    <div class="col-4">
+                        <a class="divLink" href="https://www.twitter.com/"></a>
+                        <img class="img-fluid" src="https://cdn2.iconfinder.com/data/icons/minimalism/128/twitter.png" alt="Twitter">
+                    </div>
+                    <div class="col-8 link-body">
                         <h5 class="mt-0">Twitter</h5>
-                        From breaking news and entertainment to sports and politics, get the full story with all the live commentary.
-            </div></div></div>
+                        Scroll through people saying stuff.
+                    </div>
+                </div>
+            </div>
+
             <!-- Messenger -->
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="media" onclick="location.href='https://www.messenger.com/t/737355296373449'">
-                    <img class="mr-2 img-fluid media-thumbnail" src="https://marketplace.canva.com/MAB0hzpHfHg/1/thumbnail/canva-blue-facebook-messenger-social-media-icon-MAB0hzpHfHg.png" alt="Messenger">
-                    <div class="media-body">
+                <div class="row">
+                    <div class="col-4">
+                        <a class="divLink" href="https://www.messenger.com/t/737355296373449"></a>
+                        <img class="img-fluid" src="https://marketplace.canva.com/MAB0hzpHfHg/1/thumbnail/canva-blue-facebook-messenger-social-media-icon-MAB0hzpHfHg.png" alt="Messenger">
+                    </div>
+                    <div class="col-8 link-body">
                         <h5 class="mt-0">Messenger</h5>
                         Instantly reach the people in your life.
-            </div></div></div>
+                    </div>
+                </div>
+            </div>
 
             <!-- Facebook -->
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="media" onclick="location.href='https://www.facebook.com/'">
-                    <img class="mr-2 img-fluid media-thumbnail" src="https://www.tokbox.com/blog/wp-content/uploads/2016/04/Facebook_logo_36x36.svg_.png" alt="Facebook">
-                    <div class="media-body">
+                <div class="row">
+                    <div class="col-4">
+                        <a class="divLink" href="https://www.facebook.com/"></a>
+                        <img class="img-fluid" src="https://www.tokbox.com/blog/wp-content/uploads/2016/04/Facebook_logo_36x36.svg_.png" alt="Facebook">
+                    </div>
+                    <div class="col-8">
                         <h5 class="mt-0">Facebook</h5>
                         <div class="btn-group btn-group-sm" role="group">
                             <a href="https://www.facebook.com/groups/OfficialNorCalMelee/" class="btn btn-primary btn-md" role="button">NorCal Melee</a>
                             <a href="https://www.facebook.com/groups/SJSUMelee/" class="btn btn-primary btn-md" role="button">SJSU Melee</a>
-        </div></div></div></div></div>
-
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        <!-- End of row 2 -->
+        </div>
 
         </br><div class="row grid-divider"></div></br>
+
         <div class="row">
             <!-- Smashladder -->
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="media" onclick="location.href='https://www.smashladder.com/netplay/'">
-                    <img class="mr-2 img-fluid media-thumbnail" src="https://www.smashladder.com/images/smash/tiers/grandsmasher.png" alt="Smashladder">
-                    <div class="media-body">
+                <div class="row">
+                    <div class="col-4">
+                        <a class="divLink" href="https://www.smashladder.com/netplay/"></a>
+                        <img class="img-fluid" src="https://www.smashladder.com/images/smash/tiers/grandsmasher.png" alt="Smashladder">
+                    </div>
+                    <div class="col-8">
                         <h5 class="mt-0">Smashladder</h5>
                         <div class="btn-group btn-group-sm" role="group">
                             <a href="https://www.smashladder.com/player/3591/wonderginger" class="btn btn-primary btn-md" role="button">Profile</a>
-        </div></div></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
             <!-- op.gg -->
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                    <div class="media" onclick="location.href='http://na.op.gg/'">
-                        <img class="mr-2 img-fluid media-thumbnail" src="http://opgg-static.akamaized.net/icon/Icon-144.png?v2" alt="op.gg">
-                        <div class="media-body">
-                            <h5 class="mt-0">op.gg</h5>
-                            <div class="btn-group btn-group-sm" role="group">
-                                <a href="http://na.op.gg/summoner/userName=wonderginger" class="btn btn-primary btn-md" role="button">Wonder Ginger</a>
-                                <a href="http://na.op.gg/champion/statistics" class="btn btn-primary btn-md" role="button">Stats</a>
-            </div></div></div></div></div>
+                <div class="row">
+                    <div class="col-4">
+                        <a class="divLink" href="http://na.op.gg/"></a>
+                        <img class="img-fluid" src="http://opgg-static.akamaized.net/icon/Icon-144.png?v2" alt="op.gg">
+                    </div>
+                    <div class="col-8">
+                        <h5 class="mt-0">op.gg</h5>
+                        <div class="btn-group btn-group-sm" role="group">
+                            <a href="http://na.op.gg/summoner/userName=wonderginger" class="btn btn-primary btn-md" role="button">Wonder Ginger</a>
+                            <a href="http://na.op.gg/champion/statistics" class="btn btn-primary btn-md" role="button">Stats</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

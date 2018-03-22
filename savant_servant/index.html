@@ -21,30 +21,31 @@
             header, body, footer {
             padding-left: 0;
             }
+            .parallax-container {
+                height: 100%;
+            }
         }
-        .parallax-container {
-           height: 100%;
-        }
+        
         .counter {
             background-repeat: no-repeat;
-            background-size:cover;
+            background-size:contain;
             max-width: 100%;
             height: auto;
         }
-        .log {
-            background-image: url("../assets/log.png");
+        .log-text {
+            background-image: url("/assets/log.png");
         }
-        .brick {
-            background-image: url("../assets/brick.png");
+        .brick-text {
+            background-image: url("/assets/brick.png");
         }
-        .sheep {
-            background-image: url("../assets/sheep.png");
+        .sheep-text {
+            background-image: url("/assets/sheep.png");
         }
-        .wheat {
-            background-image: url("../assets/wheat.png");
+        .wheat-text {
+            background-image: url("/assets/wheat.png");
         }
-        .stone {
-            background-image: url("../assets/stone.png");
+        .stone-text {
+            background-image: url("/assets/stone.png");
         }
         </style>
         
@@ -115,100 +116,74 @@
         
         <!-- Parallax background -->
         <div class="parallax-container">
-            <div class="parallax"><img src="/assets/parallax.jpg"></div>
-            </div>
-            <div class="section pink lighten-5">
-                <div class="row container">
-                    <h2 class="header">Parallax</h2>
-                    <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+            <div class="parallax"><img class="responsive-img" src="/assets/parallax1.jpg"></div>
+        </div>
+
+        <!-- Left -->        
+        <div class="section pink lighten-5">
+            <div class="container row">
+                <div class="row">
+                    <h4 class="header">Left</h4>
+                    <!-- Dropdown Trigger -->
+                    <a class='dropdown-trigger btn' href='#' data-target='dropdown-left'>Building</a>
+
+                    <!-- Dropdown Structure -->
+                    <ul id='dropdown-left' class='dropdown-content'>
+                        <li><a href="#!"><i class="material-icons">remove</i>Road</a></li>
+                        <li><a href="#!"><i class="material-icons">home</i>Settlement</a></li>
+                        
+                        <!-- <li class="divider" tabindex="-1"></li> -->
+                        <li><a href="#!"><i class="material-icons">location_city</i>City</a></li>
+                        <li><a href="#!"><i class="material-icons">crop_portrait</i>Dev Card</a></li>
+                    </ul>
                 </div>
+                <div class="row">
+                    <div class="col s6 m2" style="text-align: center">
+                        <img class="responsive-img" src="../assets/log.png">                        
+                        <a class="btn-floating btn-small waves-effect waves-light blue-grey darken-2 add-log-left"><i class="material-icons">add</i></a>
+                        <p id="log-left">0</p>
+                        <a class="btn-floating btn-small waves-effect waves-light blue-grey darken-2 remove-log-left"><i class="material-icons">remove</i></a>                
+                    </div>
+                    <div class="col s6 m2" style="text-align: center">
+                        <img class="responsive-img" src="../assets/brick.png">                        
+                        <a class="btn-floating btn-small waves-effect waves-light blue-grey darken-2 add-brick-left"><i class="material-icons">add</i></a>
+                        <p id="brick-left">0</p>
+                        <a class="btn-floating btn-small waves-effect waves-light blue-grey darken-2 remove-brick-left"><i class="material-icons">remove</i></a>                
+                    </div>
+                    <div class="col s6 m2" style="text-align: center">
+                        <div class="sheep-text counter white-text">
+                            <a class="btn-floating btn-small waves-effect waves-light blue-grey darken-2 remove-sheep-left"><i class="material-icons">remove</i></a>                                
+                            <h4 id="sheep-left header">0</h4> 
+                            <a class="btn-floating btn-small waves-effect waves-light blue-grey darken-2 add-sheep-left"><i class="material-icons">add</i></a>      
+                            <!-- <img class="responsive-img" src="../assets/sheep.png">  -->
+                        </div>
+                    </div>
+                    <div class="col s6 m2" style="text-align: center">
+                        <div class="wheat-text counter white-text">
+                            <!-- <img class="responsive-img" src="../assets/wheat.png">          -->
+                            <a class="btn-floating btn-small waves-effect waves-light blue-grey darken-2 add-wheat-left"><i class="material-icons">add</i></a>
+                            <h4 id="wheat-left header">0</h4>
+                            <a class="btn-floating btn-small waves-effect waves-light blue-grey darken-2 remove-wheat-left"><i class="material-icons">remove</i></a>     
+                        </div>           
+                    </div>
+                    <div class="col s6 m2" style="text-align: center">
+                        <img class="responsive-img" src="../assets/stone.png">
+                        <a class="btn-floating btn-small waves-effect waves-light blue-grey darken-2 add-stone-left"><i class="material-icons">add</i></a>
+                        <p id="stone-left">0</p>
+                        <a class="btn-floating btn-small waves-effect waves-light blue-grey darken-2 remove-stone-left"><i class="material-icons">remove</i></a>                
+                    </div>
+                </div> 
             </div>
+        </div> 
+
+        <!-- Parallax background 2 -->
+        <div class="parallax-container">
+            <div class="parallax"><img src="/assets/parallax2.jpg"></div>
+        </div>
+        
         <!-- Main page -->
         <div class="container">
-            
 
-
-            <!-- Title row -->
-            <div class="row ">
-                <div class="col s12">
-                    <div class="card indigo lighten-5">
-                        <div class="card-content black-text" style="text-align:center">
-                            <div class="row">
-                                <div class="col s2 offset-s1">
-                                    Log
-                                </div>
-                                <div class="col s2">
-                                    Brick
-                                </div>
-                                <div class="col s2">
-                                    Sheep
-                                </div>
-                                <div class="col s2">
-                                    Wheat
-                                </div>
-                                <div class="col s2">
-                                    Stone
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="divider"></div>
-
-            <!-- Left -->
-            <div class="row ">
-                <div class="col s12">
-                    <div class="card pink lighten-5">
-                        <div class="card-content black-text">
-                            <span class="card-title">Left</span>
-                            <div class="row">
-                                <div class="col s6 m2 offset-m1 log counter" style="text-align: center">
-                                    <a class="btn-floating btn-small waves-effect waves-light blue-grey darken-2 add-log-left"><i class="material-icons">add</i></a>
-                                    <p id="log-left">0</p>
-                                    <a class="btn-floating btn-small waves-effect waves-light blue-grey darken-2 remove-log-left"><i class="material-icons">remove</i></a>                
-                                </div>
-                                <div class="col s6 m2 brick counter" style="text-align: center">
-                                    <a class="btn-floating btn-small waves-effect waves-light blue-grey darken-2 add-brick-left"><i class="material-icons">add</i></a>
-                                    <p id="brick-left">0</p>
-                                    <a class="btn-floating btn-small waves-effect waves-light blue-grey darken-2 remove-brick-left"><i class="material-icons">remove</i></a>                
-                                </div>
-                                <div class="col s6 m2 sheep counter" style="text-align: center">
-                                    <a class="btn-floating btn-small waves-effect waves-light blue-grey darken-2 add-sheep-left"><i class="material-icons">add</i></a>
-                                    <p id="sheep-left">0</p>
-                                    <a class="btn-floating btn-small waves-effect waves-light blue-grey darken-2 remove-sheep-left"><i class="material-icons">remove</i></a>                
-                                </div>
-                                <div class="col s6 m2 wheat counter" style="text-align: center">
-                                    <a class="btn-floating btn-small waves-effect waves-light blue-grey darken-2 add-wheat-left"><i class="material-icons">add</i></a>
-                                    <p id="wheat-left">0</p>
-                                    <a class="btn-floating btn-small waves-effect waves-light blue-grey darken-2 remove-wheat-left"><i class="material-icons">remove</i></a>                
-                                </div>
-                                <div class="col s6 m2" style="text-align: center">
-                                    <img class="responsive-img" src="../assets/stone.png">
-                                    <a class="btn-floating btn-small waves-effect waves-light blue-grey darken-2 add-stone-left"><i class="material-icons">add</i></a>
-                                    <p id="stone-left">0</p>
-                                    <a class="btn-floating btn-small waves-effect waves-light blue-grey darken-2 remove-stone-left"><i class="material-icons">remove</i></a>                
-                                </div>
-                            </div>
-                            <div class="row">
-                                <!-- Dropdown Trigger -->
-                                <a class='dropdown-trigger btn' href='#' data-target='dropdown-left'>Building</a>
-
-                                <!-- Dropdown Structure -->
-                                <ul id='dropdown-left' class='dropdown-content'>
-                                    <li><a href="#!"><i class="material-icons">remove</i>Road</a></li>
-                                    <li><a href="#!"><i class="material-icons">home</i>Settlement</a></li>
-                                    
-                                    <!-- <li class="divider" tabindex="-1"></li> -->
-                                    <li><a href="#!"><i class="material-icons">location_city</i>City</a></li>
-                                    <li><a href="#!"><i class="material-icons">crop_portrait</i>Dev Card</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>                
-            </div>    
 
             <!-- Across -->
             <div class="row ">
@@ -217,7 +192,7 @@
                         <div class="card-content black-text ">
                             <span class="card-title">Across</span>
                             <div class="row">
-                                <div class="col s2 offset-s1" style="text-align: center">
+                                <div class="col s2 offset-m1" style="text-align: center">
                                     <a class="btn-floating btn-small waves-effect waves-light blue-grey darken-2 darken-3 add-log-across"><i class="material-icons">add</i></a>
                                     <p id="log-across">0</p>
                                     <a class="btn-floating btn-small waves-effect waves-light blue-grey darken-2 remove-log-across"><i class="material-icons">remove</i></a>                

@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var b2w2 = $.getJSON("/pokedex/pokemmo_min.json", function(json){
+    var b2w2 = $.getJSON("pokedex/pokemmo_min.json", function(json){
         // console.log(json);
         populateTable(json);
 
